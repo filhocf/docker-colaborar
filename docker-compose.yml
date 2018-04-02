@@ -1,0 +1,77 @@
+version: '3.1'
+
+services:
+  # Nginx will receive all sites and switch for each one
+  # Additional configurations can be done in ./nginx/conf.d
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/ssl:/etc/nginx/ssl
+      - ./nginx/html:/usr/share/nginx/html
+    # extra_hosts:
+    #   - "somehost:162.242.195.82"
+    #   - "otherhost:50.31.209.229"
+
+  # Kanban service
+  kanban:
+    image: kanboard/kanboard:v1.2.0
+    volumes:
+      # Copy config.php.sample to config.php and edit.
+      - ./kanboard/config.php:/var/www/app/data/config.php
+      - kanban_data:/var/www/app/data
+      - kanban_plugins:/var/www/app/plugins
+
+  worker:
+    image: kanboard/kanboard:v1.2.0
+    volumes:
+      - kanban_data:/var/www/app/data
+      - kanban_plugins:/var/www/app/plugins
+    entrypoint: bash -c '/configure; /var/www/app/cli worker'
+
+  # Beanstalk service
+  beanstalk:
+    image: schickling/beanstalkd
+
+  # Roundcube service
+  roundcube:
+    image: filhocf/roundcube
+    environment:
+      ROUNDCUBEMAIL_UPLOAD_MAX_FILESIZE: 25M
+    volumes:
+      # Copy config.php.sample to config.php and edit.
+      - ./roundcube/config:/var/roundcube/config
+
+  #IdeiaX service
+  ideax:
+    image: filhocf/ideax
+    volumes:
+      # Copy config.php.sample to config.php and edit.
+      - ./ideax/env:/var/www/ideax/.env
+
+  # Databases PostgreSQL and Mysql
+  pgdb:
+    image: postgres:10
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgresl_password
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  mydb:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql_password
+    volumes:
+      - my_data:/var/lib/mysql
+
+volumes:
+  pg_data:
+  my_data:
+  kanban_data:
+  kanban_plugins:

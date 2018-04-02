@@ -1,0 +1,1 @@
+!function(o){o(document).ready(function(){o('[data-toggle="tooltip"]').tooltip(),o(window).width()>1023&&skrollr.init(),o(window).on("resize",function(){o(window).width()<=1023&&skrollr.init().destroy()})})}(jQuery);

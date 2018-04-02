@@ -1,0 +1,11 @@
+# Adjust your settings and rename this file to .env
+ALLOWED_HOSTS=.localhost, .example.com, ideax
+AUTH_LDAP_BIND_DN=uid=ldapuser,ou=Users,o=Builtin,dc=example,dc=com
+AUTH_LDAP_BIND_PASSWORD=password_of_ldapuser
+AUTH_LDAP_GLOBAL_OPTIONS=ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_NEVER
+AUTH_LDAP_SERVER_URI=ldap://ldap.example.com
+AUTH_LDAP_START_TLS=True
+AUTH_LDAP_USER_SEARCH=ou=users,dc=example,dc=com
+DATABASE_URL=mysql://ideax:ideax@127.0.0.1:3306/ideax
+DEBUG=True
+SECRET_KEY=your_secret_from_settings.py

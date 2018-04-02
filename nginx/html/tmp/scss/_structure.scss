@@ -1,0 +1,329 @@
+@import 'bootstrap/mixins';
+@import 'variables';
+
+//==================== Animations
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    &:focus{
+        outline: rgba($blue-400, .6) solid 1px;
+    }
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'titilliumthin', sans-serif;
+    font-weight: 200;
+    height: auto !important;
+    color: $blue-gray-600;
+    
+    @media #{$mobile} {
+        font-size: 1.05rem;    
+    }
+//    
+//    &:after{
+//        content: "";
+//        background: rgba(47, 8, 43, 0.76);
+//        min-width: 2em;
+//        min-height: 2em;
+//        padding: .5em 1em;
+//        position: fixed;
+//        left: 0;
+//        bottom: 0;
+//        color: #fff;
+//        font-size: .9em;
+//        text-transform: uppercase;
+//        z-index: 99999999;
+//    }
+//    @media #{$mobile} {
+//            &:after{
+//            content: "mobile";
+//            }
+//    }
+//    @media #{$tablet} {
+//            &:after{
+//            content: "tablet";
+//            }
+//    }
+//    @media #{$desktop} {
+//            &:after{
+//            content: "desktop";
+//            }
+//    }
+//    @media #{$desktop-xl} {
+//            &:after{
+//            content: "desktop-xl";
+//            }
+//    }
+//    @media #{$desktop-xxl} {
+//            &:after{
+//            content: "desktop-xxl";
+//            }
+//    }
+//    @media #{$mobile, $tablet}{
+////        padding-bottom: 15em;
+//    }
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'titilliumregular', sans-serif;
+    font-weight: 400;
+    
+    &.light{
+            font-family: 'titilliumthin', sans-serif !important;
+        }
+}
+h{
+    &1{font-size: 4.0rem;}
+    &2{font-size: 3.0rem;}
+    &3{font-size: 2.8rem;}
+    &4{font-size: 2.4rem;}
+    &5{font-size: 2.0rem;}
+    &6{font-size: 1.8rem;}
+}
+.display{
+    &1{
+        font-size: 8.0rem;
+        letter-spacing: -.45rem;
+    }
+}
+a{
+    font-weight: 900;
+    text-decoration: none !important;
+    @include transition(all .5s cubic-bezier(0.4, 0, 0.2, 1));
+    position: relative;
+
+    &:hover{
+        color: $blue-400;
+    }
+    &.inverse{color: #fff;}
+}
+p, article{
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    
+    a{
+        &:after{
+            content: "";
+            width: 0%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            opacity: 0;
+            @include transition(all .4s cubic-bezier(0.4, 0, 0.2, 1));
+            border: 1px solid $deep-orange-A400;
+        }
+    }
+}
+strong{
+    font-weight: 900;
+}
+
+#header{background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 30rem;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    
+    &:before{
+        content: "";
+        width: 110%;
+        height: 110%;
+        background-color: #000;
+        background-image: url(../images/universe_nasa.jpg);
+        background-position: 50%;
+        background-size: cover;
+        position: absolute;
+        top: -5%;
+        left: -5%;
+        z-index: -2;
+    }
+    
+    .header-content{
+        height: 15rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include transition(all .5s cubic-bezier(0.4, 0, 0.2, 1));
+    }
+    .display1{
+        color: #fff;
+        padding: 0;
+    }
+    .description{
+        height: 15rem;
+        padding-left: 8%;
+        padding-top: 4.25rem;
+        border-left: 1px solid #fff;
+    }
+    .logo{
+        width: 8.8rem;
+        height: 3rem;
+        position: fixed;
+        right: 3rem;
+        top: 3rem;
+        
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    @media #{$tablet, $mobile}{
+        height: 20rem;
+        
+        .header-content{
+            height: 20rem;
+        }
+        .display1{
+            font-size: 4.0rem;
+            letter-spacing: -.1rem;
+        }
+        .description{
+            padding-left: 0;
+            padding-top: 1.25rem;
+            border-left: none;
+            p{
+                font-size: 1.1rem;
+            }
+        }
+        &.blur{
+            .header-content{
+                height: 10rem;
+            }
+        }
+    }
+    
+    &.blur{
+        box-shadow:0 .1rem .2rem rgba(0,0,0,.5), 0 .2rem 5rem rgba(0,0,0,.3);
+        &:before{
+          -webkit-filter: blur(.3rem);
+          -moz-filter: blur(.3rem);
+          -o-filter: blur(.3rem);
+          -ms-filter: blur(.3rem);
+          filter: blur(.3rem);
+        }
+    }
+    
+}
+main{
+    height: 90vh;
+    min-height: 90rem;
+
+    .page-header{
+        border: none;
+        margin-top: 2rem;
+    }
+    .app-content{
+        height: 15rem;
+        margin-bottom: 2.8rem;
+        
+        .app-link{
+            float: left;
+            width: 12.4rem;
+            color: $blue-gray-600;
+            text-align: center;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            &:after{
+                content: "";
+                height: 12.2rem;
+                width: 12.2rem;
+                border-radius: 6.0rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: .6rem solid $blue-400;
+                opacity: 0;
+                @include transition(all .35s cubic-bezier(0.4, 0, 0.2, 1));
+            }
+            .icon{
+                float: left;
+                font-size: 6.0rem;
+                padding: 3.0rem;
+                border-radius: 6.0rem;
+                border: .1rem solid $blue-gray-600;
+            }
+            .legend{
+                width: 100%;
+                float: left;
+                margin-top: 1.0rem;
+                font-size: 1.4rem;
+                font-family: 'titilliumregular';
+                color:  $blue-gray-700;
+            }
+            &:hover{
+                 &:after{
+                    opacity: 1;
+                }
+                .icon{
+                    border-color: $blue-400;
+                }
+                .icon, .legend{
+                    color: $blue-400;
+                }
+            }
+        }
+    }
+    
+}
+footer{
+    float: left;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

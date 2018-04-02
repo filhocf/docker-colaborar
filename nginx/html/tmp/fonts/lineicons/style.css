@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'lineicons';
+    src:    url('fonts/lineicons.eot?luntuj');
+    src:    url('fonts/lineicons.eot?luntuj#iefix') format('embedded-opentype'),
+        url('fonts/lineicons.ttf?luntuj') format('truetype'),
+        url('fonts/lineicons.woff?luntuj') format('woff'),
+        url('fonts/lineicons.svg?luntuj#lineicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="ico"], [class*=" ico"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'lineicons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icoheart:before {
+    content: "\e900";
+}
+.icocloud:before {
+    content: "\e901";
+}
+.icostar:before {
+    content: "\e902";
+}
+.icotv:before {
+    content: "\e903";
+}
+.icosound:before {
+    content: "\e904";
+}
+.icovideo:before {
+    content: "\e905";
+}
+.icotrash:before {
+    content: "\e906";
+}
+.icouser:before {
+    content: "\e907";
+}
+.icokey:before {
+    content: "\e908";
+}
+.icosearch:before {
+    content: "\e909";
+}
+.icosettings:before {
+    content: "\e90a";
+}
+.icocamera:before {
+    content: "\e90b";
+}
+.icotag:before {
+    content: "\e90c";
+}
+.icolock:before {
+    content: "\e90d";
+}
+.icobulb:before {
+    content: "\e90e";
+}
+.icopen:before {
+    content: "\e90f";
+}
+.icodiamond:before {
+    content: "\e910";
+}
+.icodisplay:before {
+    content: "\e911";
+}
+.icolocation:before {
+    content: "\e912";
+}
+.icoeye:before {
+    content: "\e913";
+}
+.icobubble:before {
+    content: "\e914";
+}
+.icostack:before {
+    content: "\e915";
+}
+.icocup:before {
+    content: "\e916";
+}
+.icophone:before {
+    content: "\e917";
+}
+.iconews:before {
+    content: "\e918";
+}
+.icomail:before {
+    content: "\e919";
+}
+.icolike:before {
+    content: "\e91a";
+}
+.icophoto:before {
+    content: "\e91b";
+}
+.iconote:before {
+    content: "\e91c";
+}
+.icoclock:before {
+    content: "\e91d";
+}
+.icopaperplane:before {
+    content: "\e91e";
+}
+.icoparams:before {
+    content: "\e91f";
+}
+.icobanknote:before {
+    content: "\e920";
+}
+.icodata:before {
+    content: "\e921";
+}
+.icomusic:before {
+    content: "\e922";
+}
+.icomegaphone:before {
+    content: "\e923";
+}
+.icostudy:before {
+    content: "\e924";
+}
+.icolab:before {
+    content: "\e925";
+}
+.icofood:before {
+    content: "\e926";
+}
+.icot-shirt:before {
+    content: "\e927";
+}
+.icofire:before {
+    content: "\e928";
+}
+.icoclip:before {
+    content: "\e929";
+}
+.icoshop:before {
+    content: "\e92a";
+}
+.icocalendar:before {
+    content: "\e92b";
+}
+.icowallet:before {
+    content: "\e92c";
+}
+.icovynil:before {
+    content: "\e92d";
+}
+.icotruck:before {
+    content: "\e92e";
+}
+.icoworld:before {
+    content: "\e92f";
+}
+
