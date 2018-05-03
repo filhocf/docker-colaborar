@@ -1,0 +1,54 @@
+{
+    "prod":{
+        "app":{
+                "log_level":"logging.ERROR"
+        },
+        "email":{
+                "servidor": "<smtp_server>:<smtp_port>",
+                "caixa": "<email>",
+                "credenciais": "<usuario>:<senha>"
+        },
+        "ldap": {
+            "mode": "uid",
+            "server": "<servidor>",
+            "secure": true,
+            "self_signed_certificate": true,
+            "bind_dn": "<user>",
+            "bind_pw": "<passwd>",
+            "base_dn": "<dn>",
+            "username_attrib": "uid",
+            "manage_user": true,
+            "manage_groups": false,
+            "custom_scope": "subtree",
+            "logging_level": "error"
+        },
+        "database":{
+            "uri" : ""
+        }
+    },
+    "dev":{
+        "app":{
+                "log_level":"logging.DEBUG"
+        },
+        "email":{
+                "servidor": "<smtp_server>:<smtp_port>",
+                "caixa": "<email>",
+                "credenciais": "<usuario>:<senha>"
+        },
+        "ldap": {
+            "mode": "custom",
+            "server": "<servidor>",
+            "secure": true,
+            "self_signed_certificate": true,
+            "base_dn": "<dn>",
+            "username_attrib": "uid",
+            "manage_user": true,
+            "manage_groups": false,
+            "custom_scope": "subtree",
+            "logging_level": "debug"
+        },
+        "database":{
+            "uri" : ""
+        }
+    }
+}

@@ -1,0 +1,42 @@
+version: '3.1'
+
+volumes:
+  my_data:
+  nextcloud:
+
+services:
+  nginx:
+   image: nginx
+   ports:
+     - 80:80
+   volumes:
+     - ./nginx/conf.d/nextcloud.conf:/etc/nginx/conf.d/default.conf
+
+  web:
+    image: nginx
+    ports:
+      - 8080:80
+    volumes:
+      - ./nextcloud/nginx/:/etc/nginx/conf.d
+      - ./nextcloud/redis/redis.config.php:/var/www/html/config/redis.config.php
+      - nextcloud:/var/www/html
+
+  nextcloud:
+    image: nextcloud:fpm
+    volumes:
+      - nextcloud:/var/www/html
+
+  collabora:
+    image: collabora/code
+    cap_add:
+      - MKNOD
+
+  redis:
+    image: redis
+
+  mydb:
+    image: mysql:5
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql_password
+    volumes:
+      - my_data:/var/lib/mysql

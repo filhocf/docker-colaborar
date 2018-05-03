@@ -1,0 +1,27 @@
+{
+  "title" : "Etherpad",
+  "ip" : "0.0.0.0",
+  "port" : 80,
+  "lang" : "pt-BR",
+  "dbType" : "mysql",
+  "dbSettings" : {
+    "user"     : "etherpad",
+    "host"     : "mydb",
+    "password" : "etherpad",
+    "database" : "etherpad"
+	},
+  "users": {
+    "admin": {
+      "password": "my_secret_password",
+      "is_admin": true
+    }
+  },
+  "ep_delete_after_delay": {
+    "delay": 604800,
+    "loop": true,
+    "loopDelay": 3600,
+    "deleteAtStart": true,
+    "text": "The content in this pad will be deleted in one week."
+  },
+  "defaultPadText" : "Welcome to Etherpad! This pad is sync when you type, so anybody can see the same page and text."
+}
