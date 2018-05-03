@@ -32,6 +32,8 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<script src="js/colaborar-min.js"></script>
+    <script defer src="js/fontawesome-all.min.js"></script>
+    <script src="js/fontawesome.js"></script>
 
 	</head>
     <body>
@@ -49,7 +51,7 @@
                         data-50="opacity:1;"
                         data-110="opacity:0;"
                     >
-                        <p>Bem vindo ao <b>laboratório</b> de ferramentas colaborativas do DESC. Neste portal estamos disponibilizando e testando ferramentas que auxiliam na produtividade de nossa equipe. O uso das ferramentas disponibilizadas neste portal tem caráter experimental, isto é, não dispõe de suporte ao usuário além da comunidade do próprio Colaborar e das comunidades dos projetos softwares utilizados.</p>
+                        <p>Bem vindo ao <b>laboratório</b> de <b>ferramentas colaborativas do DEIN</b>. Neste portal estamos disponibilizando e testando ferramentas que auxiliam na produtividade de nossa equipe. O uso das ferramentas disponibilizadas neste portal tem caráter experimental, isto é, não dispõe de suporte ao usuário além da comunidade do próprio Colaborar e das comunidades dos projetos softwares utilizados. <b>O acesso é permitido para os colaboradores do Colaborar</b>.</p>
                     </article>
                 </div>
             </div>
@@ -63,30 +65,86 @@
                <h6>Aplicações Disponíveis:</h6>
            </div>
            <div class="row">
+             <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
+               <SCRIPT LANGUAGE="javascript">
+                var servername = window.location.hostname;
+                document.write("<a href='https://agenda." + servername + "' class='app-link' data-toggle='tooltip' title='Converse com a equipe'>");
+               </SCRIPT>
+                     <i class="icon far fa-calendar-alt"></i>
+                     <span class="legend">Agenda</span>
+                 </a>
+             </div>
+             <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
+               <SCRIPT LANGUAGE="javascript">
+                var servername = window.location.hostname;
+                document.write("<a href='https://chat." + servername + "' class='app-link' data-toggle='tooltip' title='Converse com a equipe'>");
+               </SCRIPT>
+                     <i class="icon fas fa-box-open"></i>
+                     <span class="legend">Box</span>
+                 </a>
+             </div>
+             <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
+               <SCRIPT LANGUAGE="javascript">
+                var servername = window.location.hostname;
+                document.write("<a href='https://chat." + servername + "' class='app-link' data-toggle='tooltip' title='Converse com a equipe'>");
+               </SCRIPT>
+                     <i class="icon far fa-comment"></i>
+                     <span class="legend">Chat<br>(RocketChat)</span>
+                 </a>
+             </div>
+
+             <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
+               <SCRIPT LANGUAGE="javascript">
+                var servername = window.location.hostname;
+                document.write("<a href='https://dsv." + servername + "' class='app-link' data-toggle='tooltip' title='Aprenda online'>");
+               </SCRIPT>
+                     <i class="icon fas fa-graduation-cap"></i>
+                     <span class="legend">DSV</span>
+                 </a>
+             </div>
+             <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
+               <SCRIPT LANGUAGE="javascript">
+                var servername = window.location.hostname;
+                document.write("<a href='https://ideia." + servername + "' class='app-link' data-toggle='tooltip' title='Converse com a equipe'>");
+               </SCRIPT>
+                     <i class="icon far fa-lightbulb"></i>
+                     <span class="legend">Ideia<br>(ideiaX)</span>
+                 </a>
+             </div>
+             <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
+               <SCRIPT LANGUAGE="javascript">
+                var servername = window.location.hostname;
+                document.write("<a href='https://chat." + servername + "' class='app-link' data-toggle='tooltip' title='Organize suas tarefas'>");
+               </SCRIPT>
+                     <i class="icon far fa-sticky-note"></i>
+                     <span class="legend">Kanban<br>(KanBoard)</span>
+                 </a>
+             </div>
                <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
                    <SCRIPT LANGUAGE="javascript">
                     var servername = window.location.hostname;
                     document.write("<a href='https://mail." + servername + "' class='app-link' data-toggle='tooltip' title='Acesse o email'>");
                    </SCRIPT>
-                       <span class="icon ico-mail"></span>
-                       <span class="legend">Email<br>(Roundcube)</span>
+                       <i class="icon far fa-envelope"></i>
+                       <span class="legend">Mail<br>(Roundcube)</span>
                    </a>
                </div>
                <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
                  <SCRIPT LANGUAGE="javascript">
                   var servername = window.location.hostname;
-                  document.write("<a href='https://chat." + servername + "' class='app-link' data-toggle='tooltip' title='Converse com a equipe'>");
+                  document.write("<a href='https://pad." + servername + "' class='app-link' data-toggle='tooltip' title='Escreva junto com seus pares'>");
                  </SCRIPT>
-                       <span class="icon ico-bubble"></span>
-                       <span class="legend">Chat<br>(RocketChat)</span>
+                       <i class="icon fas fa-pencil-alt"></i>
+                       <span class="legend">Pad<br>(Etherpad)</span>
                    </a>
                </div>
+
                <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
                  <SCRIPT LANGUAGE="javascript">
                   var servername = window.location.hostname;
                   document.write("<a href='https://conf." + servername + "' class='app-link' data-toggle='tooltip' title='Faça uma reunião'>");
                  </SCRIPT>
-                       <span class="icon ico-tv"></span>
+                       <i class="icon fas fa-video"></i>
                        <span class="legend">Videoconferência<br>(Jitsi)</span>
                    </a>
                </div>
@@ -95,46 +153,22 @@
                   var servername = window.location.hostname;
                   document.write("<a href='https://canvas." + servername + "' class='app-link' data-toggle='tooltip' title='Planeje um produto'>");
                  </SCRIPT>
-                       <span class="icon ico-bulb"></span>
-                       <span class="legend">Canvas<br>(Web2Canvas)</span>
+                       <i class="icon far fa-object-group"></i>
+                       <span class="legend">WebCanvas<br>(Web2Canvas)</span>
                    </a>
                </div>
-               <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
+               <!-- <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
                  <SCRIPT LANGUAGE="javascript">
                   var servername = window.location.hostname;
                   document.write("<a href='https://taiga." + servername + "' class='app-link' data-toggle='tooltip' title='Gerencie projeto ágil'>");
                  </SCRIPT>
-                       <span class="icon ico-params"></span>
+                       <i class="icon fas fa-sliders-h"></i>
                        <span class="legend">Scrum<br>(Taiga)</span>
                    </a>
-               </div>
-               <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                 <SCRIPT LANGUAGE="javascript">
-                  var servername = window.location.hostname;
-                  document.write("<a href='https://chat." + servername + "' class='app-link' data-toggle='tooltip' title='Organize suas tarefas'>");
-                 </SCRIPT>
-                       <span class="icon ico-tag"></span>
-                       <span class="legend">Kanban<br>(KanBoard)</span>
-                   </a>
-               </div>
-               <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                 <SCRIPT LANGUAGE="javascript">
-                  var servername = window.location.hostname;
-                  document.write("<a href='https://dsv." + servername + "' class='app-link' data-toggle='tooltip' title='Aprenda online'>");
-                 </SCRIPT>
-                       <span class="icon ico-study"></span>
-                       <span class="legend">DSV</span>
-                   </a>
-               </div>
-               <div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                 <SCRIPT LANGUAGE="javascript">
-                  var servername = window.location.hostname;
-                  document.write("<a href='https://pad." + servername + "' class='app-link' data-toggle='tooltip' title='Escreva junto com seus pares'>");
-                 </SCRIPT>
-                       <span class="icon ico-pen"></span>
-                       <span class="legend">Pad<br>(Etherpad)</span>
-                   </a>
-               </div>
+               </div> -->
+
+
+
 
 
                <!--div class="app-content col-xs-6 col-sm-4 col-md-3 col-lg-2">
@@ -159,7 +193,7 @@
         </main>
         <footer class="text-center">
            <hr>
-            <h5>DESC/Dataprev 2018</h5>
+            <h5>DEIN/Dataprev 2018</h5>
             <p>
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" data-toggle="tooltip" data-placement="right" title="Atribuição-NãoComercial-Compartilha Igual 4.0 Internacional" target="_blank"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
             </p>
